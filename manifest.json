@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Dtek",
+  "version": "0.0.1",
+  "description": "",
+  "permissions": ["tabs", "cookies", "scripting", "storage"],
+  "action": {
+    "default_popup": "../index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.dtek-kem.com.ua/*",
+        "https://www.dtek-krem.com.ua/*"
+      ],
+      "js": ["client.js"]
+    }
+  ]
+}
